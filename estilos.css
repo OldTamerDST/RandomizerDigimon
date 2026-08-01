@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1116;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    gap: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #152228;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #ff452b;
+    width: 100%;
+    max-width: 520px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.logo-titulo {
+    width: 40%;
+    object-fit: contain;
+    margin-bottom: 5px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+p.subtitulo {
+    color: #ff452b;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: clamp(10px, 3vw, 14px);
+    opacity: 0.8;
+}
+.main-box {
+    background-color: #0d161b;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff452b;
+}
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+}
+.boton-set {
+    background-color: #ff452b;
+    color: #ffffff;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 15px;
+    font-size: clamp(10px, 3vw, 14px);
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+.boton-set:hover {
+    opacity: 0.9;
+}
+.boton-set.active {
+    background-color: #ffffff;
+    color: #ff452b;
+    box-shadow: 0 0 10px rgba(255, 69, 43, 0.5);
+}
+.grilla1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 12px;
+}
+.boton-lista {
+    background-color: #ff452b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: clamp(9px, 2.8vw, 13px);
+    font-weight: bold;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.1s;
+    flex-shrink: 0;
+}
+.boton-lista:active {
+    transform: scale(0.95);
+}
+.display-item {
+    background-color: #1a262d;
+    color: #a0aec0;
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: clamp(10px, 3vw, 14px);
+    text-align: left;
+    border: 1px solid #23333c;
+    min-height: 18px;
+    transition: color 0.3s;
+    word-break: break-word; 
+}
+.display-item.nuevo {
+    color: #ffffff;
+}
+
+.boton-buscar {
+    background-color: #23333c;
+    color: #a0aec0;
+    border: 1px solid #23333c;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    display: none;
+}
+.boton-buscar:hover {
+    background-color: #ff452b;
+    color: #ffffff;
+    border-color: #ff452b;
+}
+.boton-google {
+    background-color: #23333c;
+    color: #a0aec0;
+    border: 1px solid #23333c;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    display: none;
+}
+.boton-google:hover {
+    background-color: #4285f4;
+    color: #ffffff;
+    border-color: #4285f4;
+}
+
+.info-box {
+    background-color: #0d161b;
+    border: 1px solid #ff452b;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 540px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.info-text {
+    font-size: clamp(10px, 3vw, 12px);
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+    min-height: 24px;
+}
+.social-links {
+    font-size: clamp(8px, 2.5vw, 14px);
+    color: #a0aec0;
+}
+.social-links a {
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 2px;
+}
+.link-reddit { color: #ff4500; }
+.link-facebook { color: #1877f2; }
+.link-x { color: #1da1f2; }
+.link-soporte { color: #ff6b54; }
+.soporte-box { margin-top: 8px; }
+
+@media (max-width: 480px) {
+    .logo-titulo { max-height: 140px; min-height: 60px; }
+    .container { padding: 20px 15px; }
+    .main-box { padding: 15px 10px; }
+    .grilla1 { gap: 10px; }
+    .boton-lista { width: 90px; padding: 8px 5px; }
+    .display-item { padding: 8px 10px; }
+    .boton-buscar { padding: 6px 7px; font-size: 12px; }
+    .boton-google { padding: 6px 7px; font-size: 12px; }
+}
