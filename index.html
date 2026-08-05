@@ -10,8 +10,17 @@
 <body>
 
 <div class="container">
+    <div class="language-toggle-wrapper">
+        <span class="lang-label activo" id="labelES">ES</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="idiomaSwitch" onchange="cambiarIdioma(this.checked ? 'en' : 'es')">
+            <span class="lang-slider"></span>
+        </label>
+        <span class="lang-label" id="labelEN">EN</span>
+    </div>
+
     <img src="img/logosudtamers.png" alt="Digimon Sudtamer" class="logo-titulo">
-    <p class="subtitulo">Intenta dibujar tu propio Digimon.</p>
+    <p class="subtitulo" id="subtituloTexto">Intenta dibujar tu propio Digimon.</p>
     
     <div class="main-box">
         <div class="top-buttons">
@@ -34,13 +43,13 @@
     <div id="leyendaCategoria" class="info-text">Selecciona una categoría por vez</div>
     <div class="social-links">
         <div>
-            Compartí tu digimon en 
+            <span id="compartirTexto">Compartí tu digimon en</span> 
             <a href="https://www.reddit.com/r/DigimonSudTamers" target="_blank" class="link-reddit">Reddit</a>, 
-            <a href="https://www.facebook.com/groups/digimonsudtamers" target="_blank" class="link-facebook">Facebook</a> o 
+            <a href="https://www.facebook.com/groups/digimonsudtamers" target="_blank" class="link-facebook">Facebook</a> <span id="compartirO">o</span> 
             <a href="https://x.com/intent/post?text=%23DigimonsudTamers" target="_blank" class="link-x">X</a>
         </div>
         <div class="soporte-box">
-            Ante error o sugerencias comunicate con <a href="https://x.com/OldTamer_DST" target="_blank" class="link-soporte">OldTamer</a>
+            <span id="soporteTexto">Ante error o sugerencias comunicate con</span> <a href="https://x.com/OldTamer_DST" target="_blank" class="link-soporte">OldTamer</a>
         </div>
     </div>
 </div>

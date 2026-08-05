@@ -24,6 +24,63 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
+.language-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 6px;
+}
+.lang-label {
+    font-size: clamp(10px, 3vw, 13px);
+    font-weight: bold;
+    color: #a0aec0;
+    transition: color 0.2s;
+}
+.lang-label.activo {
+    color: #ff452b;
+}
+.lang-switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+    flex-shrink: 0;
+}
+.lang-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.lang-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #23333c;
+    border: 1px solid #ff452b;
+    transition: background-color 0.3s;
+    border-radius: 22px;
+}
+.lang-slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #ff452b;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 50%;
+}
+.lang-switch input:checked + .lang-slider {
+    background-color: #ff452b;
+}
+.lang-switch input:checked + .lang-slider::before {
+    transform: translateX(19px);
+    background-color: #ffffff;
+}
+
 .logo-titulo {
     width: 40%;
     object-fit: contain;

@@ -1,31 +1,17 @@
-const paletaColoresDigitama = ["Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Violeta", "Turquesa", "Blanco", "Negro", "Gris", "Marrón", 
+/* Digitama Colores */
+
+const paletaColoresDigitamaES = ["Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Violeta", "Turquesa", "Blanco", "Negro", "Gris", "Marrón",
     "Magenta", "Celeste", "Rosa", "Ocre", "Crema"];
 
-const bancoDatos = {
-    "digitama": {
-        "0": paletaColoresDigitama,
-        "1": ["Liso", "Militar", "Electricidad", "Anillos horizontales", "Lunares", "Círculos", 
-            "Manchas", "Anillos diagonales", "Rayas onduladas", "Atigrado horizontal", "Patrón tipo grietas", 
-            "Llamas", "Hojas", "Remaches", "Estrellas", "Espirales", "Triángulos", "Aros", "Ondas", 
-            "Flores", "Atigrado diagonal", "Manchas leopardo", "Ondulaciones", "Escamas", 
-            "Símbolo Murciélago (ejemplo: Devimon)", "Símbolo Digital Hazard (Ejemplo: Megidramon)", "Símbolo Zero Unit (Ejemplo: Culumon)", "Símbolo coraje", 
-            "Símbolo Amistad", "Símbolo esperanza", "Símbolo bondad", "Símbolo conocimiento", 
-            "Símbolo luz", "Circuito", "Símbolo Bestia (Ejemplo: Armadillomon)", "Símbolo amor", 
-            "Símbolo pureza", "Símbolo sinceridad", "Símbolo Milagros", "Símbolo Bondad", "Símbolo Destino"],
+const paletaColoresDigitamaEN = ["Red", "Yellow", "Blue", "Orange", "Green", "Purple", "Turquoise", "White", "Black", "Gray", "Brown",
+    "Magenta", "Sky Blue", "Pink", "Ochre", "Cream"];
 
-        "2": ["Rojo", "Amarillo", "Azul", "Naranja", "Verde", "Violeta", "Turquesa", "Blanco", "Negro", "Gris", "Marrón", "Magenta", "Celeste", "Rosa", "Ocre", "Crema"],
+/* Digimon Lista */
 
-        "3": ["Espinas", "Escamas", "Placa Hexagonos", "Nada", "Cuernos", "Nada", "Sombra interna", "Nada", "Alas ángel", "Alas demonio", "Holy ring", "Digicode",
-            "Nada","Alas Dragón"],
-
-        "4": ["Nada", "Color más Saturado", "Color menos Saturado", "Resplandor", "Aura color patrón", "Aura Color Base", "Pixel", "Boxels", "wireframe 3D", "Nada",
-            "Digitama en eclosión"]
-    },
-
-    "digimon": {
-        "0": ["Baby I", "Baby II", "Child", "Adult", "Perfect", "Ultimate"],
- "listasMaestras": {
-            "Baby": ["Algomon (Baby I)", "Bombmon", "Bommon", "Botamon", "Bubbmon", "Chibickmon", "Chicomon", "Choromon", "Cocomon", "Cotsucomon", "Curimon", "Dodomon",
+const bancoDatosDigimon = {
+    "0": ["Baby I", "Baby II", "Child", "Adult", "Perfect", "Ultimate"],
+    "listasMaestras": {
+        "Baby": ["Algomon (Baby I)", "Bombmon", "Bommon", "Botamon", "Bubbmon", "Chibickmon", "Chicomon", "Choromon", "Cocomon", "Cotsucomon", "Curimon", "Dodomon",
             "Dokimon", "Fufumon", "Fukamon", "Fusamon", "Jyarimon", "Keemon", "Kekomon", "Ketomon", "Kuramon", "Leafmon", "Mokumon", "Nyokimon",
             "Pafumon", "Paomon", "Peti Meramon", "Petitmon", "Pipimon", "Pitchmon", "Popomon", "Poyomon", "Punimon", "Pupumon", "Pururumon", "Pusumon", "Puttimon",
             "Puwamon", "Puyomon", "Pyonmon", "Relemon", "Sakumon", "Sunamon", "Tomorimon", "Torikara Ballmon", "Tsubumon", "Yolkmon", "Yukimi Botamon", "Yuramon", "Zerimon",
@@ -205,48 +191,146 @@ const bancoDatos = {
                         "Venusmon", "Victory Greymon", "Vikemon", "Vitium Ultimate", "Volcanicdramon", "Voltobautamon", "Voltobautamon (Fusion)", "Vortexdramon", "Vulcanusmon",
                         "War Greymon", "War Greymon (X-Antibody)", "War Greymon: \"G\" Erosion Mode", "Xiangpengmon", "Xros Up Mervamon (Beelzebumon)", "Xuanwumon", "Yihumon",
                         "Yukinamon", "Z'd Garurumon", "Zanbamon", "Zeed Millenniumon", "Zeke Greymon", "Zephagamon", "Zhuqiaomon", "Zino Garurumon", "Zombie Plutomon"]
+    },
+    "reglas": {
+        "Baby I": { "1": ["Baby"], "2": ["Baby"], "3": ["Baby"], "4": ["Baby"], "5": ["Baby"], "6": ["Baby"], "7": ["Baby", "Child"], "8": ["Baby", "Child"] },
+        "Baby II": { "1": ["Baby"], "2": ["Baby"], "3": ["Baby"], "4": ["Baby"], "5": ["Baby"], "6": ["Baby"], "7": ["Baby"], "8": ["Baby"] },
 
-        },
-        "reglas": {
-            "Baby I": { "1": ["Baby"], "2": ["Baby"], "3": ["Baby"], "4": ["Baby"], "5": ["Baby"], "6": ["Baby"], "7": ["Baby", "Child"], "8": ["Baby", "Child"] },
-            "Baby II": {  "1": ["Baby"], "2": ["Baby"], "3": ["Baby"], "4": ["Baby"], "5": ["Baby"], "6": ["Baby"], "7": ["Baby"], "8": ["Baby"] },
+        "Child": { "1": ["Child"], "2": ["Child", "Adult"], "3": ["Child", "Adult"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
+        "5": ["Child", "Adult"], "6": ["Child", "Adult"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Child", "Adult"] },
 
-            "Child": { "1": ["Child"], "2": ["Child", "Adult"], "3": ["Child", "Adult"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
-            "5": ["Child", "Adult"], "6": ["Child", "Adult"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Child", "Adult"] },
+        "Adult": { "1": ["Adult"], "2": ["Adult", "Perfect"], "3": ["Adult", "Perfect"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
+        "5": ["Adult", "Perfect"], "6": ["Adult", "Perfect"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect"] },
 
-            "Adult": { "1": ["Adult"], "2": ["Adult", "Perfect"], "3": ["Adult", "Perfect"], "4": ["Child", "Adult", "Perfect", "Ultimate"], 
-            "5": ["Adult", "Perfect"], "6": ["Adult", "Perfect"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect"] },
+        "Perfect": { "1": ["Perfect"], "2": ["Adult", "Perfect", "Ultimate"], "3": ["Adult", "Perfect"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
+        "5": ["Adult", "Perfect"], "6": ["Adult", "Perfect"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect"] },
 
-            "Perfect": { "1": ["Perfect"], "2": ["Adult", "Perfect", "Ultimate" ], "3": ["Adult", "Perfect"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
-            "5": ["Adult", "Perfect"], "6": ["Adult", "Perfect"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect"] },
-
-            "Ultimate": { "1": ["Ultimate"], "2": ["Perfect", "Ultimate" ], "3": ["Perfect", "Ultimate"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
-            "5": ["Perfect","Ultimate"], "6": ["Perfect","Ultimate"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect","Ultimate"] }
-        }
+        "Ultimate": { "1": ["Ultimate"], "2": ["Perfect", "Ultimate"], "3": ["Perfect", "Ultimate"], "4": ["Child", "Adult", "Perfect", "Ultimate"],
+        "5": ["Perfect", "Ultimate"], "6": ["Perfect", "Ultimate"], "7": ["Child", "Adult", "Perfect", "Ultimate"], "8": ["Adult", "Perfect", "Ultimate"] }
     }
 };
 
-const etiquetasVisuales = {
-    "digitama": ["Cáscara", "Patrones", "Color patrón", "Extra 1", "Extra 2"], 
-    "digimon": ["Etapa", "Base", "Cabeza", "Mandibula", "Cola", "Extremidades", "Piel", "Colores", "Extra"],
+/* Digitama Patron */
+
+const bancoDatosDigitama = {
+    es: {
+        "0": paletaColoresDigitamaES,
+        "1": ["Liso", "Militar", "Electricidad", "Anillos horizontales", "Lunares", "Círculos",
+            "Manchas", "Anillos diagonales", "Rayas onduladas", "Atigrado horizontal", "Patrón tipo grietas",
+            "Llamas", "Hojas", "Remaches", "Estrellas", "Espirales", "Triángulos", "Aros", "Ondas",
+            "Flores", "Atigrado diagonal", "Manchas leopardo", "Ondulaciones", "Escamas",
+            "Símbolo Murciélago (ejemplo: Devimon)", "Símbolo Digital Hazard (Ejemplo: Megidramon)", "Símbolo Zero Unit (Ejemplo: Culumon)", "Símbolo coraje",
+            "Símbolo Amistad", "Símbolo esperanza", "Símbolo bondad", "Símbolo conocimiento",
+            "Símbolo luz", "Circuito", "Símbolo Bestia (Ejemplo: Armadillomon)", "Símbolo amor",
+            "Símbolo pureza", "Símbolo sinceridad", "Símbolo Milagros", "Símbolo Bondad", "Símbolo Destino"],
+
+        "2": paletaColoresDigitamaES,
+
+        "3": ["Espinas", "Escamas", "Placa Hexagonos", "Nada", "Cuernos", "Nada", "Sombra interna", "Nada", "Alas ángel", "Alas demonio", "Holy ring", "Digicode",
+            "Nada", "Alas Dragón"],
+
+        "4": ["Nada", "Color más Saturado", "Color menos Saturado", "Resplandor", "Aura color patrón", "Aura Color Base", "Pixel", "Boxels", "wireframe 3D", "Nada",
+            "Digitama en eclosión"]
+    },
+
+    en: {
+        "0": paletaColoresDigitamaEN,
+        "1": ["Smooth", "Military", "Electricity", "Horizontal Rings", "Polka Dots", "Circles",
+            "Spots", "Diagonal Rings", "Wavy Stripes", "Horizontal Tiger Stripes", "Crack Pattern",
+            "Flames", "Leaves", "Rivets", "Stars", "Spirals", "Triangles", "Hoops", "Waves",
+            "Flowers", "Diagonal Tiger Stripes", "Leopard Spots", "Ripples", "Scales",
+            "Bat Symbol (e.g. Devimon)", "Digital Hazard Symbol (e.g. Megidramon)", "Zero Unit Symbol (e.g. Culumon)", "Crest of Courage Symbol",
+            "Crest of Friendship Symbol", "Crest of Hope Symbol", "Crest of Kindness Symbol", "Crest of Knowledge Symbol",
+            "Crest of Light Symbol", "Circuit", "Beast Symbol (e.g. Armadillomon)", "Crest of Love Symbol",
+            "Crest of Purity Symbol", "Crest of Sincerity Symbol", "Crest of Miracles Symbol", "Crest of Kindness Symbol", "Crest of Destiny Symbol"],
+
+        "2": paletaColoresDigitamaEN,
+
+        "3": ["Spikes", "Scales", "Hexagon Plating", "None", "Horns", "None", "Inner Shadow", "None", "Angel Wings", "Demon Wings", "Holy Ring", "Digicode",
+            "None", "Dragon Wings"],
+
+        "4": ["None", "More Saturated Color", "Less Saturated Color", "Glow", "Pattern-color Aura", "Base-color Aura", "Pixel", "Boxels", "3D Wireframe", "None",
+            "Hatching Digitama"]
+    }
 };
 
+/* Botones */
+
+const etiquetasVisuales = {
+    es: {
+        "digitama": ["Cáscara", "Patrones", "Color patrón", "Extra 1", "Extra 2"],
+        "digimon": ["Etapa", "Base", "Cabeza", "Mandibula", "Cola", "Extremidades", "Piel", "Colores", "Extra"]
+    },
+    en: {
+        "digitama": ["Eggshell", "Patterns", "Pattern Color", "Extra 1", "Extra 2"],
+        "digimon": ["Stage", "Base", "Head", "Jaw", "Tail", "Limbs", "Skin", "Colors", "Extra"]
+    }
+};
+
+/* Descriciones */
 
 const descripcionesCategorias = {
-    "digitama_set": "Dibuja el huevo de tu digimon.",
-    "digimon_set": "Dibuja tu monstruo digital.",
-    "Cáscara": "Color general del Digitama",
-    "Base": "Cuerpo, vestimenta y forma general.",
-    "Patrones": "Diseños o marcas de textura sobre la superficie.",
-    "Color patrón": "Colores del patrón.",
-    "Extra 1": "Detalles extras a agregar.",
-    "Extra 2": "Detalles extras a para que sufras.",
-    "Etapa": "Estadio evolutivo.",
-    "Cabeza": "Forma del craneo, orejas, ojos y tal vez accesorios",
-    "Mandibula": "Forma general de la nariz, hocico, boca y/o pinzas (si es que tiene).",
-    "Cola": "Protuberancia, turbina, cola, hélice o lo que toque.",
-    "Extremidades": "Brazos, piernas, patas, alas, tentáculos, ¿Ruedas?",
-    "Piel": "Textura (metálico, con pelaje, escamas, placas, etc.).",
-    "Colores": "Distribución de los colores.",
-    "Extra": "Ropa, armadura, marcas y/o incrustaciones en piel, etc..."
+    es: {
+        "digitama_set": "Dibuja el huevo de tu digimon.",
+        "digimon_set": "Dibuja tu monstruo digital.",
+        "digitama_0": "Color general del Digitama",
+        "digitama_1": "Diseños o marcas de textura sobre la superficie.",
+        "digitama_2": "Colores del patrón.",
+        "digitama_3": "Detalles extras a agregar.",
+        "digitama_4": "Detalles extras a para que sufras.",
+        "digimon_0": "Estadio evolutivo.",
+        "digimon_1": "Cuerpo, vestimenta y forma general.",
+        "digimon_2": "Forma del craneo, orejas, ojos y tal vez accesorios",
+        "digimon_3": "Forma general de la nariz, hocico, boca y/o pinzas (si es que tiene).",
+        "digimon_4": "Protuberancia, turbina, cola, hélice o lo que toque.",
+        "digimon_5": "Brazos, piernas, patas, alas, tentáculos, ¿Ruedas?",
+        "digimon_6": "Textura (metálico, con pelaje, escamas, placas, etc.).",
+        "digimon_7": "Distribución de los colores.",
+        "digimon_8": "Ropa, armadura, marcas y/o incrustaciones en piel, etc..."
+    },
+    en: {
+        "digitama_set": "Draw your digimon's egg.",
+        "digimon_set": "Draw your digital monster.",
+        "digitama_0": "Overall color of the Digitama.",
+        "digitama_1": "Designs or texture marks on the surface.",
+        "digitama_2": "Colors of the pattern.",
+        "digitama_3": "Extra details to add.",
+        "digitama_4": "Extra details, just to make you suffer.",
+        "digimon_0": "Evolutionary stage.",
+        "digimon_1": "Body, outfit and general shape.",
+        "digimon_2": "Skull shape, ears, eyes and maybe accessories.",
+        "digimon_3": "General shape of the nose, snout, mouth and/or pincers (if it has any).",
+        "digimon_4": "Protrusion, turbine, tail, propeller, or whatever fits.",
+        "digimon_5": "Arms, legs, paws, wings, tentacles... wheels?",
+        "digimon_6": "Texture (metallic, furry, scaly, plated, etc.).",
+        "digimon_7": "Color distribution.",
+        "digimon_8": "Clothing, armor, markings and/or skin inlays, etc..."
+    }
+};
+
+/* Redes */
+
+const textosUI = {
+    es: {
+        subtitulo: "Intenta dibujar tu propio Digimon.",
+        leyendaInicial: "Selecciona una categoría por vez",
+        compartirPre: "Compartí tu digimon en",
+        compartirO: "o",
+        soportePre: "Ante error o sugerencias comunicate con",
+        itemPlaceholder: "Item",
+        sinDatos: "Sin datos en esta lista",
+        googleTitle: "Buscar en Google Imágenes",
+        wikimonTitle: "Buscar en Wikimon"
+    },
+    en: {
+        subtitulo: "Try to draw your own Digimon.",
+        leyendaInicial: "Select one category at a time",
+        compartirPre: "Share your digimon on",
+        compartirO: "or",
+        soportePre: "For bugs or suggestions, contact",
+        itemPlaceholder: "Item",
+        sinDatos: "No data in this list",
+        googleTitle: "Search Google Images",
+        wikimonTitle: "Search Wikimon"
+    }
 };
